@@ -29,8 +29,8 @@ body {
     background: url('../images/bg-image.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     background-attachment: fixed;
+    background-size: cover;
     height:100vh;
 }
 .nav-items {
@@ -42,8 +42,6 @@ body {
     z-index: 100;
 }
 .nav-logo {
-    background: var(--color-white);
-    border-radius: 20px;
     width:60px;
     margin-right: 20px;
     padding-top: 15px;
@@ -74,35 +72,6 @@ body {
     font-size: 20px;
     color:white;
 }
-.sub-menus {
-    position:absolute;
-    display: none;
-    background-color: white;
-    /* padding: 8px; */
-    /* margin-top:20px; */
-    border-top: 1px solid  var(--color-diagonal);
-    transition:all 0.3s;
-}
-.fa-chevron-down {
-    margin-left: 3px;
-    font-size: 15px;
-}
-.sub-menus a {
-    text-decoration: none;
-    font-size: 15px;
-    text-transform: capitalize;
-    font-weight: bold;
-    color:black;
-}
-.sub-menus li a {
-    color:black;
-    font-size: 15px;
-}
-.dropdown:hover .sub-menus {
-    display: block;
-    /* position: relative; */
-    top:55%;
-}
 .nav-right-links {
     margin-right: 40px;
     padding-top: 20px;
@@ -117,17 +86,6 @@ body {
 .social-icons .fab:hover{
     color:var(--color-purple);
 }
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom right, var(--color-diagonal), var(--color-diagonal-2));
-    clip-path: polygon(84% 0, 100% 0, 100% 100%, 40% 100%);   
-    opacity: 0.6; 
-}
 .overlaydark {
     position: absolute;
     top:0;
@@ -139,14 +97,12 @@ body {
 }
 
 /* HOME SECTION */
-
 .home-text {
     position:absolute;
-    top:20%;
+    top:30%;
     left:5%;
     color:white;
     z-index:2;
-    width:500px;
 }
 .home-text h1 {
     font-size: 25px;
@@ -155,10 +111,7 @@ body {
 .home-text h2 {
     font-size:60px;
     padding-bottom: 20px;
-}
-.home-text p {
-    font-size: 20px;
-    padding-bottom: 15px;
+    max-width: 700px;
 }
 .home-text a {
     text-decoration:none;
@@ -182,10 +135,11 @@ body {
 /* OUR SERVICES SECTION */
 .our-services {
     display: flex;
-    justify-content: space-between;
-    width:95%;
-    margin-left: 50px;
+    margin-left: 30px;
     margin-top:100px;
+}
+.our-service-text {
+    flex: 0.2;
 }
 .our-service-text h1 {
     padding-top: 12px;
@@ -194,13 +148,11 @@ body {
     color:var(--color-diagonal-2);
 }
 .full-services {
-    width:900px;
-    margin-right: 40px;
+    flex: 0.8;
 }
 .full-services-desc h2 {
     padding-bottom: 25px;
-    width:500px;
-    font-size: 50px;
+    font-size: 40px;
     color:var(--color-text);
     text-transform: capitalize;
     font-family:var(--font-Hebo);
@@ -213,7 +165,7 @@ body {
 
 }
 .service-divider {
-    width:95%;
+    width:100%;
     border:1px solid var(--color-white);
     margin-bottom: 40px;
 }
@@ -224,12 +176,13 @@ body {
 .services-desc {
     margin-right: 18px;
 }
-.services-desc .far {
+.services-desc, .far, .fas {
     padding-bottom: 20px;
     font-size: 25px;
     color:var(--color-diagonal-2);
 }
 .services-desc h4 {
+    padding-bottom: 10px;
     font-size: 25px;
     font-family: var(--font-Hebo);
     color:var(--color-text);
@@ -240,21 +193,19 @@ body {
     margin-bottom: 40px;
 }
 .service-img img {
-    height:60vh;
+    height:fit-content;
     width:100%;
+    margin-top: 20px;
 }
 
 /* BUSINESS PORTFOLIO SECTION */
 .business-portfolio {
-    margin-top: 100px;
-    width:95%;
+    margin-top: 70px;
+    width:100%;
+    max-width: 1150px;
     margin-left: 40px;
 }
 .business-heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 .business-heading h3 {
@@ -262,19 +213,15 @@ body {
     padding-bottom: 40px;
     text-transform: uppercase;
     color:var(--color-diagonal-2);
+    font-family: var(--font-Hebo);
 }
 .business-heading h1 {
-    font-size: 50px;
+    font-size: 40px;
     padding-bottom: 15px;
     color:var(--color-text);
     font-family: var(--font-Hebo);
 }
-.business-heading p {
-    font-size: 20px;
-    color:var(--color-text);
-    width:800px;
-    margin-bottom: 30px;
-}
+
 .business-container {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -308,70 +255,14 @@ body {
 /* REVIEW SECTION CONTAINER */
 .review-container {
     background: var(--color-diagonal);
-    height:70vh;
-    position:relative;
-    margin-top: 100px;
-    padding-bottom: 50px;
-}
-.review-items {
-    position:absolute;
-    top:-20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--color-white);
-    border:2px solid var(--color-diagonal);
-    border-radius:10px;
-    height:150px;
-    width:90%;
-    margin-left:70px;
-}
-.reviews {
-    margin-top:20px;
-    /* margin-bottom: 20px; */
-    margin-left:80px;
-    margin-right:170px;
-    position: relative;
-}
-.review-icons {
-    background:var(--color-diagonal);
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right:10px;
-}
-.review-count {
-    position:absolute;
-    left:100%;
-    top:-25%;
-}
-.review-icons, .fab, .fas {
-    font-size: 30px;
-    color:var(--color-white);
-}
-.review-count span {
-    font-size: 50px;
-    font-weight: 900;
-    font-family: var(--font-Hebo);
-    color:var(--color-text);
-    
-}
-.review-count p {
-    font-weight: 600;
-    padding-bottom: 20px;
-    width:300px;
-    font-size:20px;
-    color:var(--color-text);
-    margin-top: -5px;
+    margin-top: 50px;
+    height: fit-content;
+    padding-top: 30px;
 }
 .reviewers {
     display: flex;
-    padding-top: 100px;
-    width:90%;
-    margin-left: 50px;
+    padding-top: 10px;
+    margin-left:10px;
     color:var(--color-white);
 }
 .reviewers-info {
@@ -404,16 +295,15 @@ body {
 /* CONTACT US CONTAINER */
 .contact-us-container {
     background: var(--color-text);
-    height:120vh;
+    height:fit-content;
 }
 .contact-us {
     display: flex;
-    width:95%;
-    margin-left: 60px;
-    padding-top: 100px;
+    margin-left: 30px;
+    padding-top: 70px;
 }
 .contact-us-left {
-    width:550px;
+    flex: 0.5;
 }
 .contact-us-left h1 {
     font-size: 40px;
@@ -436,6 +326,9 @@ body {
     margin-right: 60px;
 }
 /* CONTACT US RIGHT */
+.contact-us-right {
+    flex: 0.5;
+}
 .contact-us-right h2 {
     font-size: 35px;
     padding-bottom: 25px;
@@ -443,17 +336,20 @@ body {
     color:var(--color-white);
 }
 input {
-    width:30vw;
+    width:35vw;
     height:50px;
     margin: 15px;
     border-radius: 5px;
     outline: none;
     border: none;
+    font-family: serif;
 }
 .textarea-field{
     margin: 15px;
     height:30vh;
-    width:30vw;
+    width:35vw;
+    outline: none;
+    font-family: serif;
 }
 
 input,textarea[placeholder] {
@@ -477,8 +373,7 @@ button {
     position: relative;
 }
 .footer {
-    width:100%;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-top: 80px;
     margin-bottom: 50px;
 }
@@ -486,7 +381,7 @@ button {
     width:60px;
 }
 .footer-social {
-    padding-top: 30px;
+    padding-top: 50px;
 }
 .footer-social .fab {
     font-size: 20px;
@@ -501,29 +396,28 @@ button {
 }
 .footer-logo {
     margin-right: 30px;
-    width:300px;
-}
-.footer-lists {
-    margin-left: 30px;
 }
 .footer-lists h2 {
     padding-bottom: 25px;
     font-family: var(--font-Hebo);
-    font-weight: 400;
+    font-weight: 600;
 }
 .footer-lists p {
     line-height:25px;
     font-size: 18px;
 }
 .copyright {
-    width:90%;
     margin-left: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
 }
+.copyright p {
+    margin-left: 40%;
+}
 .scroll-home {
+    margin-right: 30px;
     background: var(--color-diagonal);
     width:50px;
     height:50px;
@@ -533,39 +427,24 @@ button {
     font-size: 30px;
     padding-left:13px;
     padding-top: 10px;
+    color:var(--color-white);
 }
-
-@media screen and (max-width:1240px) {
-    .review-items {
-        width:90%;
-        margin-left: 50px;
+@media screen and (max-width:1280px) {
+     .business-portfolio {
+        margin-left: 60px;
     }
-    
-}
-@media screen and (max-width:1220px) {
-    .review-items {
-        width:90%;
-        margin-left: 30px;
-    }
-    .review-count p {
-        width:200px;
-        font-size: 18px;
-    }
-    
 }
 @media screen and (max-width:1200px) {
-    .reviews {
-        margin:90px;
-    }
     .our-service-text h1 {
         font-size: 15px;
         padding-top: 15px;
     }
 }
+
 @media screen and (max-width:1130px) {
-   .full-services {
-    width:800px;
-}
+     .business-portfolio {
+        margin-left: 0;
+    }
 .full-services-desc h2 {
     font-size: 40px;
 }
@@ -577,9 +456,6 @@ button {
 }
 }
 @media screen and (max-width:1097px) {
-   .full-services {
-    width:800px;
-}
 .full-services-desc h2 {
     font-size: 30px;
 }
@@ -588,25 +464,6 @@ button {
 }
 .learn-more a {
     font-size: 18px;
-}
-.reviews {
-    margin:80px;
-}
-.review-icons {
-    width:40px;
-    height:40px;
-}
-.review-icons, .fab, .fas {
-    font-size: 20px;
-}
-.review-count span {
-    font-size: 40px;
-}
-.contact-us {
-    width:90%;
-}
-.contact-us-left {
-    width:500px;
 }
 .contact-us left h1 {
     font-size: 30px;
@@ -631,10 +488,18 @@ input {
     font-size: 20px;
 }
 }
-@media screen and (max-width:1007px) {
-    .full-services {
-        width:700px;
+@media screen and (max-width:1030px) {
+    .services-desc h4 {
+        font-size: 20px;
     }
+    .full-services-desc h2 {
+        font-size: 30px;
+    }
+    .full-services-desc p {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1007px) {
     .full-services-desc h2 {
         font-size: 27px;
     }
@@ -651,19 +516,6 @@ input {
         font-size: 18px;
         width:600px;
     }
-    .reviews {
-        margin: 70px;
-    }
-    .review-icons {
-    width:30px;
-    height:30px;
-}
-.review-icons, .fab, .fas {
-    font-size: 15px;
-}
-.review-count span {
-    font-size: 30px;
-}
 .business-brand .fas {
     font-size: 30px;
 }
@@ -674,20 +526,13 @@ input {
     font-size: 18px;
 }
 .reviewers {
-    width:95%;
-    margin-left: 30px;
+    margin-left: 0px;
 }
 .reviewers-info-text {
-    font-size: 15px;
+    font-size: 18px;
 }
 .reviewers-name {
     font-size: 12px;
-}
-.contact-us {
-    width:90%;
-}
-.contact-us-left {
-    width:500px;
 }
 .contact-us-left h1 {
     font-size: 30px;
@@ -709,18 +554,14 @@ input,textarea[placeholder] {
     font-size:17px;
 }
 .service-img img {
-    height:50vh;
+    height:fit-content;
     width:100%;
-}
-.footer {
-    width:95%;
 }
 .footer-lists h2 {
     font-size: 20px;
 }
 .footer-logo {
     margin-right: 30px;
-    width:200px;
 }
 .footer--logo img {
     padding-bottom: 20px;
@@ -745,6 +586,7 @@ input,textarea[placeholder] {
         left:93%;
         padding-top: 15px;
         cursor: pointer;
+        color:var(--color-white);
     }
     #closeBtn {
         position:absolute;
@@ -758,10 +600,10 @@ input,textarea[placeholder] {
     }
     .nav-links {
         position:absolute;
-        top:90%;
+        top:0%;
         left:-100%;
         background: var(--color-diagonal);
-        height:70vh;
+        height:50vh;
         width:40vw;
         transition:left 0.4s ease-in-out;
     }
@@ -775,48 +617,90 @@ input,textarea[placeholder] {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top:300%;
+        top:200%;
         padding-right:40px;
         padding-top: 60px;
     }
     .social-icons .fab {
         margin: 10px;
+        color:var(--color-diagonal-2);
     }
     
     .nav-links-lists  {
         flex-direction: column;
         padding-top:30px;
+        padding-left: 10px;
     }
     .nav-links-lists li {
         border-bottom: 1px solid  var(--color-bluish-cyan);
         text-align: center;
     }
-}
-
-@media screen and (max-width:915px) {
-    .full-services {
-        width:600px;
+    .contact-divider {
+        margin-right:10px;
+        margin-left: 10px;
     }
+}
+@media screen and (max-width:980px) {
+    .footer-lists {
+        margin-left: 20px;
+    }
+    
+}
+@media screen and (max-width:945px) {
+    .footer-lists p {
+        font-size: 15px;
+    }
+    
+}
+@media screen and (max-width:939px) {
+    .reviewers-info {
+        margin: 18px;
+    }
+    
+}
+@media screen and (max-width:915px) {
+    .services-desc h4 {
+    font-size: 20px;
+}
     .contact-us-left h1 {
     font-size: 25px;
 }
-    .reviews {
-        margin-left: 60px;
+@media screen and (max-width:875px) {
+    .services-desc h4 {
+        font-size: 17px;
     }
-    .review-count span {
-    font-size: 30px;
+    .reviewers-info-text {
+    font-size: 15px;
+}
+.ratings .fa {
+    font-size: 13px;
 }
 }
-@media screen and (max-width:802px) {
-    .full-services {
-        width:500px;
+}
+@media screen and (max-width:847px) {
+     .business-portfolio {
+        margin-left: 0;
     }
+    .footer-lists h2 {
+        font-size: 18px;
+    }
+    .footer-lists {
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width:806px) {
     .full-services h2 {
         font-size: 22px;
+    }
+    .full-services-desc p {
+        font-size: 15px;
     }
     .services-desc h4 {
         font-size: 15px;
         padding-bottom: 20px;
+    }
+     .business-portfolio {
+        margin-left: 0;
     }
     .business-heading h1 {
         font-size: 30px;
@@ -824,53 +708,27 @@ input,textarea[placeholder] {
     .business-brand p {
         font-size:16px;
     }
-    .reviews {
-        margin-left:55px;
-    }
-    .review-count p {
-        padding-top: 15px;
-        width:200px;
-        font-size: 15px;
-    }
-    .review-items {
-        width:95%;
-        top:-10%;
-        margin-left: 10px;
-    }
-    .review-icons  {
-        margin-right:10px;
-    }
-    .review-count {
-        left:75%;
-    }
-    .review-count span {
-        font-size:27px;
-    }
     .review-container {
-        height:140vh;
+        height: fit-content;
     }
     .reviewers {
         flex-direction: column;
-        padding-top: 120px;
+        padding-top: 30px;
+        margin-left: 5px;
     }
     .reviewers-info {
         margin-top: 0px;
     }
-    .reviewers-info-text {
-        font-size: 22px;
+    .ratings {
+        padding-bottom: 18px;
     }
     .reviewers-name {
-        font-size: 17px;
+        font-size: 14px;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
     .reviewers-info-info{
-        margin:10px;
-    }
-    .contact-us{
-        width:95%;
-        margin-left: 30px;
-    }
-    .contact-us-left {
-        width:600px;
+        margin:0px;
     }
     .contact-divider {
         margin-right:20px;
@@ -895,18 +753,30 @@ input,textarea[placeholder] {
         padding-bottom: 20px;
     }
 }
-
+@media screen and (max-width:778px) {
+    .business-portfolio {
+        margin-left: 0;
+    }
+    .full-services-desc p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:749px) {
+    .full-services-desc p {
+        font-size: 13px;
+    }
+}
 @media screen and (max-width:730px) {
     .nav-logo {
         width:50px;
     }
     .home-text {
-        width:600px;
+        left:15%;
         text-align: center;
         margin-top: 50px;
     }
     .home-text h2 {
-        font-size: 37px;
+        font-size: 40px;
     }
     .home-text p {
         font-size: 20px;
@@ -920,94 +790,49 @@ input,textarea[placeholder] {
     }
     .our-services {
         flex-direction: column;
+        margin-left: 30px;
+        margin-top: 60px;
     }
     .our-service-text h1 {
         padding-bottom: 30px;
         font-size: 20px;
     }
-    .full-services {
-        width:700px;
-    }
     .full-services-desc h2 {
         font-size: 30px;
     }
     .full-services-desc p {
-        font-size: 20px;
-        width:650px;
+        font-size: 17px;
     }
     .services-option {
         flex-direction: column;
     }
-    .services-desc .far {
-    font-size: 35px;
+    .services-desc .fas {
+    font-size: 30px;
 }
 .services-desc h4 {
-    font-size: 25px;
+    font-size: 23px;
+}
+.services-desc p {
+    margin-bottom: 0;
 }
 .business-portfolio {
-    width:98%;
-    margin-left: 10px;
-    margin-bottom: 200px;
+    margin-left: 0px;
 }
 .business-container {
     display: flex;
     flex-direction: column;
 }
+
 .business-brand .fas {
     font-size: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 .business-brand h4 {
     font-size: 25px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 .business-brand p {
     font-size: 20px;
-}
-.review-items {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    height:40vh;
-    width:70%;
-    margin-left: 100px;
-    top:-15%;
-    margin-bottom: 100px;
-}
-.reviews {
-    margin-top:10px;
-    margin-left: 30px;
-}
-.review-icons {
-    width:50px;
-    height:50px;
-}
-.review-count {
-    left:50%;
-    top:-5%;
-}
-.review-icons, .fab, .fas {
-    font-size: 25px;
-    color:var(--color-white);
-}
-.review-count span {
-    font-size: 30px;
-    
-}
-.review-count p {
-    font-size:19px;
-}
-.reviewers {
-    padding-top: 130px;
-    width:85%;
-    margin-left: 30px;
-}
-.reviewers-info-text {
-    font-family: var(--font-Hebo);
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-.ratings .fa {
-    font-size: 18px;
 }
 .reviewers-info-info {
     margin-bottom: 0;
@@ -1017,15 +842,13 @@ input,textarea[placeholder] {
     margin-right: 10px;
     padding-top:10px;
 }
-.reviewers-name {
-    font-size: 15px;
-}
 .contact-us-container {
-    height:160vh;
+    height:fit-content;
 }
 .contact-us {
-    padding-top: 80px;
+    padding-top: 50px;
     flex-direction: column;
+    margin-left: 10px;
 }
 .contact-us-left h1 {
     font-size: 30px;
@@ -1043,12 +866,12 @@ input,textarea[placeholder] {
     border-bottom:1px solid var(--color-white);
     margin-top: 30px;
     margin-bottom: 40px;
+    margin-left: 0;
 }
 /* CONTACT US RIGHT */
 input {
-    width:90%;
+    width:85vw;
     height:50px;
-    margin: 15px;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -1062,13 +885,10 @@ input {
 }
 @media screen and (max-width:640px) {
     .home-text {
-        width:500px;
-    }
-    .home-text p {
-        font-size: 18px;
+        left:10%;
     }
     .nav-logo {
-        margin-left: 20px;
+        margin-left: 0;
     }
     #openBtn {
         left:90%;
@@ -1076,12 +896,11 @@ input {
     .our-services {
         margin-left: 15px;
     } 
-    .full-services-desc p {
-        font-size: 18px;
-        margin-right: 50px;
-        word-wrap: wrap;
+    .services-desc p {
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
-    .services-desc .far{
+    .services-desc .fas{
         font-size: 25px;
     }
     .services-desc h4 {
@@ -1103,48 +922,16 @@ input {
     .business-brand p {
         font-size: 17px;
     }
-    .reviewers-info-text {
-        font-size: 15px;
-    }
-    .ratings .fa {
-        font-size: 15px;
-    }
-    .review-items {
-        width:60%;
-    }
-    .review-icons {
-    width:30px;
-    height:30px;
-}
-.review-count {
-    left:40%;
-    top:-10%;
-}
-.review-icons, .fab, .fas {
-    font-size: 18px;
-}
-.review-count span {
-    font-size: 25px;
-}
-.review-count p {
-    font-size: 14px;
-}
-.reviewers-name {
-    font-size: 12px;
-}
 }
 @media screen and (max-width:615px) {
+    .home-text {
+        left:7%;
+    }
     .business-brand h4 {
         font-size: 20px;
     }
     .business-heading p {
         width:500px;
-    }
-    .review-count {
-        left:50%;
-    }
-    .review-count span {
-        font-size: 22px;
     }
     .contact-us-left h1 {
         font-size: 25px;
@@ -1155,37 +942,19 @@ input {
     .contact-us-left span {
         font-size: 17px;
     }
-    .scroll-home {
-        display: none;
-    }
+
 }
 
 @media screen and (max-width:580px) {
     .home-text h2 {
         padding-bottom: 40px;
-    }
-    .nav-logo {
-        margin-left: 10px;
-    }
-    .review-count {
-        left:70%;
-    }
-    .full-services-desc p {
-        width:500px;
-    }
-    .contact-us {
-    padding-top: 70px;
-    }
-    .contact-us-left {
-        width:80%;
+        font-size: 35px;
     }
     .contact-us h1 {
         font-size: 30px;
     }
-    button {
-        margin:10px;
-        padding: 10px 20px;
-        font-size: 15px;
+    .footer {
+        margin-left: 0;
     }
     .footer-items {
         display: flex;
@@ -1194,39 +963,55 @@ input {
         align-items: center;
     }
     .footer-logo {
-        width:500px;
-        margin-left: 20px;
+        margin-right: 0;
+    }
+    .footer--logo {
+        margin-left: 15px;
     }
     .footer-social {
         padding-bottom: 30px;
-    } 
-    .footer-lists {
-        margin-right: 80px;
+        margin-left: 30px;
     }
     .footer-lists p {
     line-height:28px;
     font-size: 20px;
 }
+.scroll-home {
+    width:40px;
+    height:40px;
 }
-
+.scroll-home .fas {
+    font-size: 20px;
+}
+.copyright p{
+    margin-left: 30%;
+}
+}
+@media screen and (max-width:552px) {
+    .review-container {
+        height: fit-content;
+    }
+}
+@media screen and (max-width:525px) {
+    .review-container {
+        height: fit-content;
+    }
+    
+}
 @media screen and (max-width:520px) {
     .home-text h2 {
-        font-size:35px;
-    }
-    .home-text {
-        width:400px;
-        margin-left: 30px;
-    }
-    .full-services {
-        width:500px;
+        font-size:33px;
     }
     .full-services-desc h2 {
         font-size: 28px;
     }
     .business-portfolio {
-        width:90%;
-        margin-left: 40px;
+        margin-left: 0px;
     }
+    .business-brand {
+    padding-bottom: 30px;
+    height: fit-content;
+}
     .business-heading h1 {
         font-size: 25px;
     }
@@ -1238,28 +1023,28 @@ input {
     .contact-us h1 {
         font-size: 25px;
     }
-    .footer-logo  {
-        width:400px;
-    }
     .footer-logo p {
     padding-bottom: 20px;
     }
 }
 @media screen and (max-width:500px) {
-    .review-count {
-    left:72%;
+    .nav-container {
+        overflow:hidden;
     }
-    .review-container {
-        height:120vh;
+    .home-text h1 {
+        font-size: 18px;
+    }
+    .home-text h2 {
+        font-size: 40px;
     }
     .nav-links {
         position:absolute;
-        top:90%;
+        top:0%;
         left:-100%;
         background: var(--color-diagonal);
         height:70vh;
         width:60vw;
-        transition:left 0.6s ease-in-out;
+        transition:left 0.4s ease-in-out;
     }
     .showMenu{
         left:0%;
@@ -1275,25 +1060,16 @@ input {
     .social-icons .fab {
         margin: 10px;
     }
-    .footer-container {
-        align-items: center;
+    .review-container {
+        height: fit-content;
     }
-    .service-img img {
-        height:30vh;
-    }
-    .reviewers {
-        padding-top:90px;
-    }
-    .review-items {
-        height:30vh;
-        width:65vw;
+    .reviewers-info-text {
+        font-size: 15px;
     }
     .contact-us-container {
-        height:160vh;
+        height:fit-content;
     }
-    .footer-lists {
-        margin-right:50px;
-    }
+
 }
 
 @media screen and (max-width:470px) {
@@ -1308,17 +1084,30 @@ input {
         padding-right:40px;
         font-size:15px;
     }
-    .contact-us-container {
-        height:150vh;
+    .learn-more {
+        padding-right:50px;
     }
-    .review-items {
-        width:70vw;
-        margin-left:50px;
+    .business-heading h1 {
+        font-size:20px;
+    }
+    .review-container {
+        height: fit-content;
+    }
+    .contact-us-container {
+        height:fit-content;
     }
     .contact-us-left h1 {
         font-size: 20px;
     }
     .contact-us-right h2 {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:425px) {
+    .business-portfolio {
+        margin-left: 0;
+    }
+    .business-heading h1 {
         font-size: 20px;
     }
 }

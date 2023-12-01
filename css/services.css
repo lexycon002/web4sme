@@ -44,9 +44,7 @@ body {
     z-index: 100;
 }
 .nav-logo {
-    background: var(--color-white);
     width:60px;
-    border-radius: 20px;
     margin-right: 20px;
     padding-top: 15px;
     margin-left: 40px;
@@ -77,31 +75,6 @@ body {
     font-size: 20px;
     color:white;
 }
-.sub-menus {
-    position:absolute;
-    display: none;
-    background-color: white;
-    /* padding: 8px; */
-    /* margin-top:10px; */
-    border-top: 1px solid #000;
-    transition:all 0.3s;
-}
-.dropdown:hover .sub-menus {
-    display: block;
-}
-.fa-chevron-down {
-    margin-left: 3px;
-    font-size: 15px;
-}
-.sub-menus li a {
-    font-size: 15px;
-    text-transform: capitalize;
-    color:black;
-    font-weight: bold;
-}
-.sub-menus a:hover {
-    color:var(--color-diagonal);
-}
 .nav-right-links {
     margin-right: 40px;
     padding-top: 20px;
@@ -128,26 +101,22 @@ body {
     padding-bottom: 10px;
     font-family: var(--font-Hebo);
 }
-.about p {
-    font-size: 25px;
-    word-wrap: break-word;
-    max-width: 600px;
-}
 
 /* SERVICES SECTION */
 .service-container {
     background: url("../images/digital-marketing-agency-arc-stroke-white-grad-1.svg");
     background-position: top right;
     background-size:45vw auto;
-    height:100vh;
+    height:fit-content;
     background-repeat:no-repeat;
 }
 .service-items {
     display: flex;
-    width: 100%;
-    max-width:1200px;
-    margin-left: 70px;
+    margin-left: 30px;
     margin-top: 120px;
+}
+.service-left {
+    flex:0.5;
 }
 .service-left h2 {
     text-transform: uppercase;
@@ -172,8 +141,10 @@ body {
     color: var(--color-text-2);
 }
 .service-right {
+    flex:0.5;
+}
+.service-right {
     display: flex;
-    margin-left: 100px;
 }
 .service-right-bg {
      background: var(--color-white);
@@ -206,7 +177,7 @@ body {
 .work-details-container {
     width: 100%;
     max-width: 1200px;
-    margin-left: 50px;
+    margin-left: 30px;
     margin-bottom:150px;
 }
 .work-details {
@@ -248,17 +219,15 @@ body {
 /* CONTACT US CONTAINER */
 .contact-us-container {
     background: var(--color-text);
-    height:120vh;
+    height:fit-content;
 }
 .contact-us {
     display: flex;
-    width:100%;
-    /* max-width:750px; */
-    margin-left: 60px;
-    padding-top: 100px;
+    margin-left: 30px;
+    padding-top: 70px;
 }
 .contact-us-left {
-    max-width:550px;
+    flex:0.5;
 }
 .contact-us-left h1 {
     font-size: 40px;
@@ -281,6 +250,9 @@ body {
     margin-right: 60px;
 }
 /* CONTACT US RIGHT */
+.contact-us-right {
+    flex: 0.5;
+}
 .contact-us-right h2 {
     font-size: 35px;
     padding-bottom: 25px;
@@ -321,8 +293,7 @@ button {
     position: relative;
 }
 .footer {
-    width:100%;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-top: 80px;
     margin-bottom: 50px;
 }
@@ -345,10 +316,6 @@ button {
 }
 .footer-logo {
     margin-right: 30px;
-    width:300px;
-}
-.footer-lists {
-    margin-left: 30px;
 }
 .footer-lists h2 {
     padding-bottom: 25px;
@@ -361,14 +328,17 @@ button {
     font-family: var(--font-Hebo);
 }
 .copyright {
-    width:90%;
     margin-left: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
 }
+.copyright p {
+    margin-left: 40%;
+}
 .scroll-home {
+    margin-right: 30px;
     background: var(--color-diagonal);
     width:50px;
     height:50px;
@@ -380,9 +350,6 @@ button {
     padding-top: 10px;
     color:var(--color-bluish-cyan);
 }
-
-
-
 
 @media screen and  (max-width:1254px) {
         .work-details-container {
@@ -425,12 +392,7 @@ button {
         .work-details-img img {
         width: 100%;
 }
-.contact-us {
-    width:90%;
-}
-.contact-us-left {
-    width:500px;
-}
+
 .contact-us left h1 {
     font-size: 30px;
 }
@@ -461,22 +423,6 @@ input{
         margin-left: 80px;
     }
 }
-@media screen and (max-width:1055px) {
-    .service-items {
-        max-width: 950px;
-    }
-    .service-right {
-        margin-left: 80px;
-    }
-}
-@media screen and (max-width:1055px) {
-    .service-items {
-        max-width: 950px;
-    }
-    .service-right {
-        margin-left: 80px;
-    }
-}
 @media screen and (max-width:1017px) {
     .work-details-text {
         text-align: left;
@@ -494,7 +440,7 @@ input{
 }
 @media screen and (max-width:1007px) {
     .service-container  {
-        height:130vh;
+        height:fit-content;
     }
     .service-right {
         margin-left: 0;
@@ -504,21 +450,9 @@ input{
         flex-direction: column;
         margin-top: 50px;
     }
-    .service-left h3 {
-        max-width: 700px;
-    }
-    .service-left p {
-        max-width:800px;
-    }
     .service-right-bg {
         width:40vw;
     }
-.contact-us {
-    width:90%;
-}
-.contact-us-left {
-    width:500px;
-}
 .contact-us-left h1 {
     font-size: 30px;
 }
@@ -538,15 +472,11 @@ input, textarea {
 input,textarea[placeholder] {
     font-size:17px;
 }
-.footer {
-    width:95%;
-}
 .footer-lists h2 {
     font-size: 20px;
 }
 .footer-logo {
     margin-right: 30px;
-    width:200px;
 }
 .footer--logo img {
     padding-bottom: 20px;
@@ -584,7 +514,7 @@ input,textarea[placeholder] {
     }
     .nav-links {
         position:absolute;
-        top:90%;
+        top:0%;
         left:-100%;
         background: var(--color-diagonal);
         height:70vh;
@@ -617,20 +547,30 @@ input,textarea[placeholder] {
         border-bottom: 1px solid  var(--color-bluish-cyan);
         text-align: center;
     }
+    .contact-divider {
+        margin-right:10px;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width:980px) {
+    .footer-lists {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width:945px) {
+    .footer-lists p {
+        font-size: 15px;
+    }
+    
 }
 @media screen and (max-width:936px) {
     .about h1 {
         text-align: center;
-        font-size: 60px;
-    }
-    .about p {
-        font-size: 20px;
     }
 }
 
 @media screen and (max-width:921px) {
     .service-left h3 {
-        max-width: 800px;
         font-size: 40px;
     }
     
@@ -641,11 +581,9 @@ input,textarea[placeholder] {
 }
 .service-left h3 {
     font-size: 45px;
-    max-width: 800px;
     font-weight: 600;
 }
 .service-left  p {
-    max-width: 680px;
     font-size: 18px;
 }
 }
@@ -658,7 +596,6 @@ input,textarea[placeholder] {
 @media screen and (max-width:813px) {
     .service-left h3 {
     font-size: 38px;
-    max-width: 800px;
     font-weight: 600;
 }
 .work-details-text h2 {
@@ -672,13 +609,6 @@ input,textarea[placeholder] {
 }
 }
 @media screen and (max-width:802px) {
-    .contact-us{
-        width:95%;
-        margin-left: 30px;
-    }
-    .contact-us-left {
-        width:600px;
-    }
     .contact-divider {
         margin-right:20px;
     }
@@ -708,8 +638,6 @@ input,textarea[placeholder] {
     }
     .service-left h3 {
     font-size: 38px;
-    max-width: 800px;
-    font-weight: 500;
 }
     .service-right {
         flex-direction: column;
@@ -721,12 +649,14 @@ input,textarea[placeholder] {
         width:85vw;
     }
     .work-details-container {
-        margin-top: 40vh;
+        margin-top:40px;
+        margin-bottom: 40px;
     }
     .work-details {
         display: flex;
         flex-direction: column;
         position: relative;
+        margin-left: 0;
     }
     .work-details-text {
         padding-top: 0;
@@ -734,6 +664,7 @@ input,textarea[placeholder] {
     }
     .work-details-text p {
         max-width: 600px;
+        padding-right: 20px;
     }
     .work-details-img img {
         width:70%;
@@ -761,30 +692,6 @@ input,textarea[placeholder] {
     }
     
 }
-@media screen and (max-width:696px) {
-
-    .work-details-img img {
-        width:82%;
-    }
-    
-}
-@media screen and (max-width:670px) {
-    .about h1 {
-        font-size: 40px;
-    }
-     .about p {
-        font-size: 16px;
-        padding-top: 40px;
-    }
-}
-@media screen and (max-width:601px) {
-    .work-details-img img {
-        width:82%;
-    }
-    .img-up {
-        margin-bottom: 150px;
-    }
-}
 @media screen and (max-width:730px) {
     .nav-logo {
         width:50px;
@@ -793,11 +700,12 @@ input,textarea[placeholder] {
         top:350%;
     }
 .contact-us-container {
-    height:160vh;
+    height:fit-content;
 }
 .contact-us {
-    padding-top: 80px;
+    padding-top: 50px;
     flex-direction: column;
+    margin-left: 10px;
 }
 .contact-us-left h1 {
     font-size: 30px;
@@ -815,12 +723,12 @@ input,textarea[placeholder] {
     border-bottom:1px solid var(--color-white);
     margin-top: 30px;
     margin-bottom: 40px;
+    margin-left: 0;
 }
 /* CONTACT US RIGHT */
 input{
-    width:90%;
+    width:85vw;
     height:50px;
-    margin: 15px;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -832,29 +740,34 @@ input{
     padding-top: 25px;
 }
 }
-@media screen and (max-width:714px) {
-    .service-left h3 {
-        max-width: 500px;
-    }
-    .service-left p {
-        max-width: 600px;
+@media screen and (max-width:696px) {
+
+    .work-details-img img {
+        width:82%;
     }
     
 }
+@media screen and (max-width:670px) {
+    .about h1 {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:601px) {
+    .work-details-img img {
+        width:82%;
+    }
+    .img-up {
+        margin-bottom: 150px;
+    }
+}
 @media screen and (max-width:640px) {
     .nav-logo {
-        margin-left: 20px;
+        margin-left: 0;
     }
     #openBtn {
         left:90%;
     }
 
-}
-@media screen and (max-width:730px) {
-     .service-left p {
-        max-width: 550px;
-    }
-    
 }
 @media screen and (max-width:615px) {
     .contact-us-left h1 {
@@ -866,31 +779,14 @@ input{
     .contact-us-left span {
         font-size: 17px;
     }
-    .scroll-home {
-        display: none;
-    }
 }
 
 @media screen and (max-width:580px) {
-    .nav-logo {
-        margin-left: 10px;
-    }
-    .service-left p {
-        max-width: 500px;
-    }
-    .contact-us {
-    padding-top: 70px;
-    }
-    .contact-us-left {
-        width:80%;
-    }
     .contact-us h1 {
         font-size: 30px;
     }
-    button {
-        margin:10px;
-        padding: 10px 20px;
-        font-size: 15px;
+    .footer {
+        margin-left: 0;
     }
     .footer-items {
         display: flex;
@@ -899,18 +795,28 @@ input{
         align-items: center;
     }
     .footer-logo {
-        width:500px;
-        margin-left: 20px;
+        margin-right: 0;
+    }
+    .footer--logo {
+        margin-left: 15px;
     }
     .footer-social {
         padding-bottom: 30px;
+        margin-left:30px;
     } 
-    .footer-lists {
-        margin-right: 80px;
-    }
     .footer-lists p {
     line-height:28px;
     font-size: 20px;
+}
+.scroll-home {
+    width:40px;
+    height:40px;
+}
+.scroll-home .fas {
+    font-size: 20px;
+}
+.copyright p{
+    margin-left: 30%;
 }
 }
 @media screen and (max-width:565px){
@@ -923,7 +829,6 @@ input{
         font-size: 30px;
     }
        .service-left p {
-        max-width: 500px;
         font-size: 17px;
     }
     
@@ -933,9 +838,6 @@ input{
     .contact-us h1 {
         font-size: 25px;
     }
-    .footer-logo  {
-        width:400px;
-    }
     .footer-logo p {
     padding-bottom: 20px;
     }
@@ -943,7 +845,7 @@ input{
 @media screen and (max-width:500px) {
     .nav-links {
         position:absolute;
-        top:90%;
+        top:0%;
         left:-100%;
         background: var(--color-diagonal);
         height:70vh;
@@ -956,28 +858,28 @@ input{
     .social-icons .fab {
         margin: 10px;
     }
-    .footer-container {
-        align-items: center;
-    }
+
     .contact-us-container {
-        height:160vh;
-    }
-    .footer-lists {
-        margin-right:50px;
+        height:fit-content;
     }
 }
 @media screen and (max-width:485px) {
-       .service-left p {
-        max-width: 450px;
+    .service-left p {
         font-size: 15px;
     }
-       .service-left h3{
+    .service-left h3{
         font-size: 28px;
     }
 }
 @media screen and (max-width:469px) {
-         .reverse-text-1{    
-        top:15%;
+    .service-left h3{
+        font-size: 25px;
+    }
+        .reverse-text-1{    
+        top:13%;
+    }
+    .img-shift-left {
+        margin-bottom: 20px;
     }
     .reverse-text {
         top:58%;
@@ -985,17 +887,21 @@ input{
 }
 @media screen and (max-width:470px) {
     .contact-us-container {
-        height:150vh;
-    }
-    .review-items {
-        width:70vw;
-        margin-left:50px;
+        height:fit-content;
     }
     .contact-us-left h1 {
         font-size: 20px;
     }
     .contact-us-right h2 {
         font-size: 20px;
+    }
+     .nav-right-links .social-icons {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top:415%;
+        padding-right:40px;
+        padding-top: 60px;
     }
 }
 @media screen and (max-width:437px) {
@@ -1009,7 +915,10 @@ input{
 }
 @media screen and (max-width:432px) {
         .reverse-text-1{    
-            top:14%;
+            top:15%;
+    }
+    .img-shift-left {
+        margin-bottom: 50px;
     }
     .reverse-text {
         top:57%;

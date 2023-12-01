@@ -44,9 +44,7 @@ body {
     z-index: 100;
 }
 .nav-logo {
-    background: var(--color-white);
     width:60px;
-    border-radius: 20px;
     margin-right: 20px;
     padding-top: 15px;
     margin-left: 40px;
@@ -76,29 +74,6 @@ body {
     font-size: 20px;
     color:white;
 }
-.sub-menus {
-    position:absolute;
-    display: none;
-    background-color: white;
-    /* padding: 8px; */
-    /* margin-top:10px; */
-    border-top: 1px solid  var(--color-diagonal);
-    transition:all 0.3s;
-}
-.dropdown:hover .sub-menus {
-    display: block;
-}
-.fa-chevron-down {
-    margin-left: 3px;
-    font-size: 15px;
-}
-
-.sub-menus li a {
-    font-size: 15px;
-    text-transform: capitalize;
-    font-weight: bold;
-    color:black;
-}
 .nav-right-links {
     margin-right: 40px;
     padding-top: 20px;
@@ -118,7 +93,7 @@ body {
 .contact {
     position:absolute;
     top:30%;
-    left:10%;
+    left:5%;
     color:var(--color-white);
 }
 .contact h1 {
@@ -126,26 +101,17 @@ body {
     padding-bottom: 10px;
     font-family: var(--font-Hebo);
 }
-.contact p {
-    font-size: 25px;
-    word-wrap: break-word;
-    /* line-height: 1.6rem; */
-}
 
 /* GET IN TOUCH SECTION */
 .get-in-touch-container {
-    width: 100%;
-    max-width: 1250px;
-    margin-left: 60px;
-    height: 90vh;
+    margin-left: 40px;
 }
 .get-in-touch {
     display: flex;
     margin-top: 80px;
 }
 .get-in-touch-left{
-    max-width: 500px;
-    margin-right: 60px;
+    flex:0.5;
 }
 .get-in-touch-left h4 {
     text-transform: uppercase;
@@ -182,7 +148,7 @@ body {
     margin-left: 5px;
 }
 .get-in-touch-right {
-    margin-left: 100px;
+    flex:0.5;
 }
 .get-in-touch-info {
     display: flex;
@@ -214,16 +180,15 @@ body {
 /* CONTACT US CONTAINER */
 .contact-us-container {
     background: var(--color-text);
-    height:120vh;
+    height:fit-content;
 }
 .contact-us {
     display: flex;
-    width:100%;
-    margin-left: 60px;
-    padding-top: 100px;
+    margin-left: 30px;
+    padding-top: 70px;
 }
 .contact-us-left {
-    max-width:550px;
+    flex:0.5;
 }
 .contact-us-left h1 {
     font-size: 40px;
@@ -246,6 +211,9 @@ body {
     margin-right: 60px;
 }
 /* CONTACT US RIGHT */
+.contact-us-right {
+    flex: 0.5;
+}
 .contact-us-right h2 {
     font-size: 35px;
     padding-bottom: 25px;
@@ -253,17 +221,20 @@ body {
     color:var(--color-white);
 }
 input{
-    width:30vw;
+    width:35vw;
     height:50px;
     margin: 15px;
     border-radius: 5px;
     outline: none;
     border: none;
+    font-family: serif;
 }
 .textarea-field{
     margin: 15px;
     height:30vh;
-    width:30vw;
+    width:35vw;
+    outline: none;
+    font-family: serif;
 }
 input,textarea[placeholder] {
     padding-left: 20px;
@@ -286,8 +257,7 @@ button {
     position: relative;
 }
 .footer {
-    width:100%;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-top: 80px;
     margin-bottom: 50px;
 }
@@ -295,7 +265,7 @@ button {
     width:60px;
 }
 .footer-social {
-    padding-top: 30px;
+    padding-top: 50px;
 }
 .footer-social .fab {
     font-size: 20px;
@@ -310,7 +280,6 @@ button {
 }
 .footer-logo {
     margin-right: 30px;
-    width:300px;
 }
 .footer-lists {
     margin-left: 30px;
@@ -326,14 +295,17 @@ button {
     font-family: var(--font-Hebo);
 }
 .copyright {
-    width:90%;
     margin-left: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
 }
+.copyright p {
+    margin-left: 40%;
+}
 .scroll-home {
+    margin-right: 30px;
     background: var(--color-diagonal);
     width:50px;
     height:50px;
@@ -374,14 +346,9 @@ button {
     
 }
 @media screen and (max-width:1097px) {
- .contact-us {
-     width:90%;
- }
- .contact-us-left {
-     width:500px;
- }
- .contact-us left h1 {
-     font-size: 30px;
+
+.contact-us left h1 {
+    font-size: 30px;
  }
  .contact-divider {
      margin-left: 40px;
@@ -401,12 +368,6 @@ button {
  }
  }
  @media screen and (max-width:1007px) {
- .contact-us {
-    width:90%;
- }
- .contact-us-left {
-    width:500px;
- }
  .contact-us-left h1 {
     font-size: 30px;
  }
@@ -426,15 +387,11 @@ button {
  input,textarea[placeholder] {
      font-size:17px;
  }
- .footer {
-     width:95%;
- }
  .footer-lists h2 {
      font-size: 20px;
  }
  .footer-logo {
-     margin-right: 30px;
-     width:200px;
+    margin-right: 30px;
  }
  .footer--logo img {
      padding-bottom: 20px;
@@ -475,13 +432,13 @@ button {
         margin-left: 5px;
      }
      .nav-links {
-         position:absolute;
-         top:90%;
-         left:-100%;
-         background: var(--color-diagonal);
-         height:70vh;
-         width:40vw;
-         transition:left 0.4s ease-in-out;
+        position:absolute;
+        top:0%;
+        left:-100%;
+        background: var(--color-diagonal);
+        height:70vh;
+        width:40vw;
+        transition:left 0.4s ease-in-out;
      }
      .showMenu{
          left:0;
@@ -516,13 +473,19 @@ button {
     .info-address p {
         font-size: 20px;
     }
+     .contact-divider {
+        margin-right:10px;
+        margin-left: 10px;
+    }
 
 }
-
-@media screen and (max-width:950px) {
-    .contact p {
-        font-size: 20px;
+@media screen and (max-width:980px) {
+    .footer-lists {
+        margin-left: 20px;
     }
+    
+}
+@media screen and (max-width:950px) {
     
     .get-in-touch-left{
         max-width: 300px;
@@ -531,7 +494,11 @@ button {
         font-size: 40px;
     }
 }
-
+@media screen and (max-width:945px) {
+    .footer-lists p {
+        font-size: 15px;
+    }
+}
 @media screen and (max-width:915px) {
     .contact-us-left h1 {
     font-size: 25px;
@@ -555,7 +522,38 @@ button {
     }
     
 }
-
+@media screen and (max-width:847px) {
+    .footer-lists h2 {
+        font-size: 18px;
+    }
+    .footer-lists {
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width:806px) {
+    .contact-divider {
+        margin-right:20px;
+    }
+    .footer-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+     }
+     .footer-lists {
+        margin-bottom: 30px;
+     }
+     .footer-lists h2 {
+        font-weight: bold;
+     }
+     .footer-lists p {
+        font-size: 18px;
+     }
+     .footer-logo p {
+        font-size: 20px;
+     }
+     .footer-social {
+        padding-bottom: 20px;
+    }
+ }
 @media screen and (max-width:765px) {
     .get-in-touch {
         flex-direction: column;
@@ -563,7 +561,7 @@ button {
     }
     .get-in-touch-container {
         margin-left: 20px;
-        height: 120vh;
+        height: fit-content;
         padding-top: 30px;
     }
     .get-in-touch-left {
@@ -590,47 +588,17 @@ button {
 
 }
 
-@media screen and (max-width:802px) {
-    .contact-us{
-        width:95%;
-        margin-left: 30px;
-     }
-     .contact-us-left {
-         width:600px;
-     }
-     .contact-divider {
-         margin-right:20px;
-     }
-     .footer-items {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-     }
-     .footer-lists {
-        margin-bottom: 30px;
-     }
-     .footer-lists h2 {
-        font-weight: bold;
-     }
-     .footer-lists p {
-        font-size: 18px;
-     }
-     .footer-logo p {
-        font-size: 20px;
-     }
- }
- @media screen and (max-width:765px) {
-    .get-in-touch-container {
-        height:130vh;
-    }
-    
- }
  @media screen and (max-width:730px) {
+    .nav-logo {
+        width:50px;
+    }
  .contact-us-container {
-     height:160vh;
+     height:fit-content;
  }
  .contact-us {
-     padding-top: 80px;
+     padding-top: 50px;
      flex-direction: column;
+     margin-left: 10px;
  }
  .contact-us-left h1 {
      font-size: 30px;
@@ -648,12 +616,12 @@ button {
      border-bottom:1px solid var(--color-white);
      margin-top: 30px;
      margin-bottom: 40px;
+     margin-left: 0;
  }
  /* CONTACT US RIGHT */
  input {
-     width:90%;
+     width:85vw;
      height:50px;
-     margin: 15px;
      border-radius: 5px;
      outline: none;
      border: none;
@@ -662,21 +630,27 @@ button {
     padding-top: 25px;
  }
  .textarea-field {
-    width:83vw;
+    width:85vw;
 }
  }
-
-@media screen and (max-width:644px) {
-    .get-in-touch-container {
-        height: 130vh;
+@media screen and (max-width:670px) {
+    .contact h1 {
+        font-size: 35px;
     }
 }
-
+@media screen and (max-width:644px) {
+    .get-in-touch-container {
+        height: fit-content;
+    }
+}
 
  @media screen and (max-width:640px) {
      #openBtn {
         left:90%;
      }
+     .nav-logo {
+        margin-left: 0;
+    }
  }
  @media screen and (max-width:615px) {
      .contact-us-left h1 {
@@ -688,26 +662,20 @@ button {
      .contact-us-left span {
         font-size: 17px;
      }
-     .scroll-home {
-        display: none;
-     }
  }
  
  @media screen and (max-width:580px) {
-     .contact-us {
-     padding-top: 70px;
-     }
-     .contact-us-left {
-         width:80%;
-     }
-     .contact-us h1 {
-         font-size: 30px;
-     }
-     button {
-         margin:10px;
-         padding: 10px 20px;
-         font-size: 15px;
-     }
+    .contact-us h1 {
+        font-size: 30px;
+    }
+    button {
+        margin:10px;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .footer {
+        margin-left: 0;
+    }
      .footer-items {
          display: flex;
          flex-direction: column;
@@ -715,47 +683,48 @@ button {
          align-items: center;
      }
      .footer-logo {
-         width:500px;
-         margin-left: 20px;
+       margin-right: 0;
      }
+     .footer--logo {
+        margin-left: 15px;
+    }
      .footer-social {
          padding-bottom: 30px;
+         margin-left: 30px;
      }
-     .footer-lists {
-        margin-right: 80px;
-     } 
      .footer-lists p {
      line-height:28px;
      font-size: 20px;
  }
+ .scroll-home {
+    width:40px;
+    height:40px;
+}
+.scroll-home .fas {
+    font-size: 20px;
+}
+.copyright p{
+    margin-left: 30%;
+}
  }
   @media screen and (max-width:565px) {
     .get-in-touch-container {
-        height:140vh;
-    }
-    
- }
- @media screen and (max-width:547px) {
-    .contact h1 {
-        font-size: 40px;
+        height:fit-content;
     }
     
  }
  @media screen and (max-width:520px) {
     .contact-us h1 {
         font-size: 25px;
-     }
-     .footer-logo  {
-        width:400px;
-     }
-     .footer-logo p {
-     padding-bottom: 20px;
-     }
-     .get-in-touch-container {
-        height: 140vh;
-      }
-      .get-in-touch-left h2 {
-         font-size: 30px;
+    }
+    .footer-logo p {
+    padding-bottom: 20px;
+    }
+    .get-in-touch-container {
+        height: fit-content;
+    }
+    .get-in-touch-left h2 {
+        font-size: 30px;
       }
       .get-in-touch-left p {
         font-size: 15px;
@@ -764,48 +733,49 @@ button {
  @media screen and (max-width:500px) {
      .nav-links {
          position:absolute;
-         top:90%;
+         top:0%;
          left:-100%;
          background: var(--color-diagonal);
          height:70vh;
          width:60vw;
-         transition:left 0.6s ease-in-out;
+         transition:left 0.4s ease-in-out;
      }
      .showMenu{
          left:0%;
      }
      .nav-right-links .social-icons {
-         display: flex;
-         flex-direction: column;
-         position: absolute;
-         top:350%;
-         padding-right:40px;
-         padding-top: 60px;
-     }
-     .social-icons .fab {
-         margin: 10px;
-     }
-     .footer-container {
-        align-items: center;
-     }
-     .contact-us-container {
-        height:160vh;
-     }
-     .footer-lists {
-        margin-right:50px;
-     }
-     
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top:350%;
+        padding-right:40px;
+        padding-top: 60px;
+    }
+    .social-icons .fab {
+        margin: 10px;
+    }
+    .contact-us-container {
+        height:fit-content;
+    }
  }
  
  @media screen and (max-width:470px) {
     .contact-us-container {
-        height:140vh;
+        height:fit-content;
     }
     .contact-us-left h1 {
         font-size: 20px;
     }
     .contact-us-right h2 {
         font-size: 20px;
+    }
+     .nav-right-links .social-icons {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top:415%;
+        padding-right:40px;
+        padding-top: 60px;
     }
 }
 

@@ -9,12 +9,9 @@ closeIcon.addEventListener("click", () => {
     containerDom.classList.remove("showMenu");
 });
 
-const chevronIcon = document.querySelector(".toggle-chevron");
-const subMenus = document.querySelector(".sub-menus")
 
-chevronIcon.addEventListener("click", ()=> {
-    subMenus.style.display = "block";
-});
-chevronIcon.addEventListener("click", ()=> {
-    subMenus.style.display = "none";
-});
+// Function to update date
+const dateUpdate = document.querySelector(".date");
+
+const currentYear = new Date().getFullYear();
+dateUpdate.textContent = currentYear;
